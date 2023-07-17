@@ -15,7 +15,7 @@ const App = () => {
   // Function to handle form submission
   const handleSubmit = (preferences) => {
     // Send preferences to the backend API
-    axios.post('http://localhost:3001/api/V1/products/recommendations', preferences)
+    axios.post('https://meal-recommendation-backend.onrender.com/recommendations', preferences)
       .then((response) => {
         console.log(response.data)
         setRecommendedMeals(response.data);
@@ -26,7 +26,7 @@ const App = () => {
   };
   const fetchPastOrders = () => {
     // Send a request to the backend API to fetch past orders
-    axios.get('http://localhost:3001/api/V1/products/getOrderHistory')
+    axios.get('https://meal-recommendation-backend.onrender.com/getOrderHistory')
       .then((response) => {
         setPastOrders(response.data);
       })
