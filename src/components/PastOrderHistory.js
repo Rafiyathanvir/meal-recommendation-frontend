@@ -10,7 +10,7 @@ const PastOrderHistory = ({ orders }) => {
         <div className="grid w-[1000px] grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {orders.map((order) => (
             <div key={order.Id} className="bg-white rounded-md shadow-md p-4">
-              <p className="font-bold">Order ID: {order.Id}</p>
+              <p className="font-bold">Order ID: {order.customerId}</p>
               <p>Meal: {order.meal}</p>
               <p>Quantity: {order.quantity}</p>
               <p>Date: {order.date}</p>
